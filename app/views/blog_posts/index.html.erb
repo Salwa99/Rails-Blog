@@ -1,5 +1,5 @@
 <h1>Welcome to my Blog</h1>
 <% @blog_posts.each do |post| %>
-   <h1><%= post.title%></h1>
+   <h1><%= link_to post.title, blog_post_path(post.id)%></h1>
     <p><%= post.body%></p>
 <%end%>
